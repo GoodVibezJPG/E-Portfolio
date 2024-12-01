@@ -1,0 +1,259 @@
+:root{
+    --ct-umber: #594236;
+    --ct-linen: #f9ebe0;
+    --ct-brunswick-green: #345b4e;
+    --ct-gunmetal: #1f332e;
+    --ct-raisin-black: #1a181b;
+    --ct-platinum: #e3e1de;
+}
+html,body { 
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    background: var(--ct-platinum); 
+    color: var(--ct-umber); 
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    
+}
+p{
+    
+}
+
+/* I need a hero*/
+.hero-full-height {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+/* Drawn Arrow */
+#arrow{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    z-index: 2;
+    bottom: 10%;
+    left: 10%;
+}
+.arrow-svg {
+    width: 100%;
+    height: 100%;
+}
+/* Arrow Path */
+.arrow-path {
+    stroke-dasharray: 1200;
+    stroke-dashoffset: 1200; /* Positve value makes it draw from bottom to top */
+    animation: drawArrow 3.5s ease forwards; /* forwards keeps the last frame of the animation */
+}
+/* Arrow Animation */
+@keyframes drawArrow {
+    to {
+        stroke-dashoffset: 0;
+    }
+}
+
+/* Waving Hand Emoji */
+.wave-hand {
+    animation-name: wave-animation;  /* Refers to the name of your @keyframes element below */
+    animation-duration: 2.5s;        /* Change to speed up or slow down */
+    animation-iteration-count: infinite;  /* Never stop waving :) */
+    transform-origin: 70% 70%;       /* Pivot around the bottom-left palm */
+    display: inline-block;
+  }
+/* The animation code */
+@keyframes wave-animation {
+    0% { transform: rotate( 0.0deg) }
+    10% { transform: rotate(14.0deg) }  
+    20% { transform: rotate(-8.0deg) }
+    30% { transform: rotate(14.0deg) }
+    40% { transform: rotate(-4.0deg) }
+    50% { transform: rotate(10.0deg) }
+    60% { transform: rotate( 0.0deg) }  /* Reset for the last half to pause */
+    100% { transform: rotate( 0.0deg) }
+}
+
+
+/* Waves */
+.wave-container{
+    z-index: -1;
+    position: absolute;
+    width: 100%;
+    height: auto;
+    pointer-events: none;
+    overflow: hidden;
+}
+#top-wave{
+    top: -15%;
+    filter: drop-shadow(-10px -10px var(--ct-brunswick-green));
+    animation: drawEffect 3.5s ease forwards;
+}
+#bottom-wave{
+    filter: drop-shadow(-10px 10px var(--ct-brunswick-green));
+    animation: drawEffect 3.5s ease forwards;
+}
+/* Drawing Effect */
+@keyframes drawEffect {
+    0% {
+        stroke-dasharray: 0, 1000;
+        stroke-dashoffset: 0;
+    }
+    100% {
+        stroke-dasharray: 1000, 0;
+        stroke-dashoffset: -1000;
+    }
+}
+
+.draw-effect {
+    animation: drawEffect 2s linear forwards;
+}
+
+
+@media screen and (max-width: 768px){
+    /* #top-wave{
+        top: 10%;
+    } */
+    #bottom-wave{   
+        bottom: 5%;
+        left: 0;
+    }   
+}
+
+form{
+    width: 26rem;
+}
+/* 
+
+.curve {
+    position: absolute;
+    height: 250px;
+    width: 100%;
+    bottom: 0;
+    text-align: center;
+    z-index: -1;
+}
+
+.curve::before {
+    content: '';
+    display: block;
+    position: absolute;
+    border-radius: 100% 50%;
+    width: 60%;
+    height: 100%;
+    transform: translate(-23%, 47%);
+    background-color: var(--ct-brunswick-green);
+
+}
+
+.curve::after {
+    content: '';
+    display: block;
+    position: absolute;
+    border-radius: 100% 50%;
+    width: 60%;
+    height: 100%;
+    transform: translate(65%, 67%);
+    background-color: var(--ct-platinum);
+} */
+.custom-shape-divider-top-1732745338 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+}
+.custom-shape-divider-top-1732745338 svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 35px;
+}
+.custom-shape-divider-top-1732745338 .shape-fill {
+    fill: #E3E1DE;
+}
+.custom-shape-divider-bottom-1732745759 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
+}
+.custom-shape-divider-bottom-1732745759 svg {
+    position: relative;
+    display: block;
+    width: calc(132% + 1.3px);
+    height: 35px;
+}
+.custom-shape-divider-bottom-1732745759 .shape-fill {
+    fill: #E3E1DE;
+}
+
+
+.custom-shape-divider-top-1732745944 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+}
+
+.custom-shape-divider-top-1732745944 svg {
+    position: relative;
+    display: block;
+    width: calc(132% + 1.3px);
+    height: 35px;
+    transform: rotateY(180deg);
+}
+
+.custom-shape-divider-top-1732745944 .shape-fill {
+    fill: #E3E1DE;
+}
+
+
+.custom-shape-divider-bottom-1732740563 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
+}
+
+.custom-shape-divider-bottom-1732740563 svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 54px;
+}
+
+
+.custom-shape-divider-bottom-1732740563 .shape-fill {
+    fill: #345B4E;
+}
+
+.custom-shape-divider-top-1732744258 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+}
+
+.custom-shape-divider-top-1732744258 svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 52px;
+}
+
+.custom-shape-divider-top-1732744258 .shape-fill {
+    fill: #345B4E;
+}
+
