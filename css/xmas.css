@@ -1,0 +1,477 @@
+/* Christmas Theme Color Variables */
+:root{
+    --ct-christmas-yellow: #F3BD3C;    /* Bright yellow for highlights */
+    --ct-christmas-gold: #AE8B43;      /* Warm gold for accents */
+    --ct-christmas-tan: #C6A989;       /* Neutral tan color */
+    --ct-christmas-blue: #4557B8;      /* Medium blue for backgrounds */
+    --ct-christmas-dark-blue: #001829; /* Dark blue for contrast */
+    --ct-christmas-white: #f3f8f2;     /* Off-white for text */
+
+    /* Font families */
+    --ct-christmas-head-font: "Frank Ruhl Libre", serif;  /* Decorative font for headings */
+    --ct-christmas-text-font: "Varela Round", serif;      /* Clean font for body text */
+}
+
+/* Christmas Theme Toggle Button Container */
+#xmas-mode-box {
+    position: fixed;        /* Fixed position on screen */
+    bottom: 50px;          /* Distance from bottom */
+    left: 20px;           /* Distance from left */
+    z-index: 999;         /* Always on top */
+}
+
+/* Christmas Theme Toggle Button Styling */
+#xmas-mode-label {
+    cursor: pointer;                               /* Show clickable cursor */
+    font-size: 1.5rem;                            /* Icon size */
+    padding: 20px;                                /* Space around icon */
+    background: var(--ct-christmas-dark-blue);    /* Dark background */
+    border-radius: 50%;                           /* Circular shape */
+    transition: all 0.3s ease;                    /* Smooth transitions */
+    display: flex;                                /* Flex container */
+    align-items: center;                          /* Center vertically */
+    justify-content: center;                      /* Center horizontally */
+    width: 35px;                                  /* Fixed width */
+    height: 35px;                                 /* Fixed height */
+    opacity: 0.6;                                 /* Partial transparency */
+}
+
+/* Change label background when theme is active */
+#xmas-mode-toggle:checked ~ * #xmas-mode-label{
+    background: var(--ct-christmas-white);
+}
+
+/* Interactive States for Toggle Button */
+#xmas-mode-label:hover,
+#xmas-mode-label:active {
+    transform: scale(1.1);                        /* Grow on hover */
+    background: rgba(0, 24, 41, 0.8);            /* Darker background */
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.3);    /* Add shadow */
+    opacity: 1;                                   /* Full opacity */
+}
+
+/* Hide the actual checkbox input */
+#xmas-mode-toggle {
+    display: none;
+}
+
+
+
+#xmas-mode-toggle:checked ~ * .navbar-toggler {
+    color: var(--ct-christmas-gold);
+    background-color: var(--ct-christmas-gold);
+    border-color: var(--ct-christmas-gold);
+    filter: drop-shadow(0 0 5px var(--ct-christmas-gold));
+    transition: all 0.3s ease;
+}
+
+#xmas-mode-toggle:checked ~ * .navbar-toggler:hover {
+    filter: drop-shadow(0 0 8px var(--ct-christmas-gold));
+    transform: scale(1.05);
+}
+
+
+
+/* General Text */
+#xmas-mode-toggle:checked ~ * h1 {
+    color: var(--ct-christmas-yellow);
+    font: 700 4.5rem var(--ct-christmas-head-font);
+    filter: drop-shadow(0 0 2px var(--ct-christmas-gold));
+    transition: 0.5s;
+}
+#xmas-mode-toggle:checked ~ * h2 {
+    color: var(--ct-christmas-yellow);
+    font : 2.5rem var(--ct-christmas-head-font);
+    filter: drop-shadow(0 0 2px var(--ct-christmas-gold));
+    transition: 0.5s;
+}
+#xmas-mode-toggle:checked ~ * h3 {
+    color: var(--ct-christmas-yellow);
+    font : 3rem var(--ct-christmas-head-font);
+    filter: drop-shadow(0 0 2px var(--ct-christmas-gold));
+    transition: 0.5s;
+}
+#xmas-mode-toggle:checked ~ * h4 {
+    color: var(--ct-christmas-yellow);
+    font : 2.5rem var(--ct-christmas-head-font);
+    filter: drop-shadow(0 0 2px var(--ct-christmas-gold));
+    transition: 0.5s;
+}
+
+
+#xmas-mode-toggle:checked ~ * p {
+    color: var(--ct-christmas-white);
+    font : 1.4rem var(--ct-christmas-text-font);
+    filter: drop-shadow(0 0 2px var(--ct-christmas-gold));
+
+    transition: 0.5s;
+}
+/* Links */
+#xmas-mode-toggle:checked ~ * .ct-link {
+    color: var(--ct-christmas-tan);
+}
+
+/* Borders */
+#xmas-mode-toggle:checked ~ * .border-bottom {
+    border-bottom-color: var(--ct-christmas-yellow);
+}
+#xmas-mode-toggle:checked ~ * .border-bottom-thick {
+    border-bottom-color: var(--ct-christmas-yellow);
+}
+
+/* Buttons */
+#xmas-mode-toggle:checked ~ * .btn-primary {
+    --bs-btn-bg: var(--ct-christmas-gold);
+    --bs-btn-border-color: var(--ct-christmas-gold);
+    --bs-btn-hover-bg: var(--ct-christmas-yellow);
+    --bs-btn-hover-border-color: var(--ct-christmas-yellow);
+    transition: background-color 1s ease, border-color 1s ease;
+    font : 1.2rem var(--ct-christmas-text-font);
+}
+
+/* Navbar */
+#xmas-mode-toggle:checked ~ * .navbar {
+    --bs-navbar-color: var(--ct-christmas-white);
+    --bs-navbar-hover-color: var(--ct-christmas-white);
+    background: var(--ct-christmas-dark-blue);
+    font: 1.2rem var(--ct-christmas-head-font);
+    --bs-navbar-hover-color: var(--ct-christmas-yellow) !important; /*WTF why is this have to be important?, idk whatever*/
+    --bs-navbar-active-color: var(--ct-christmas-yellow) !important;
+}
+#xmas-mode-toggle:checked ~ * .navbar a{
+    color: var(--ct-christmas-white);
+}
+#xmas-mode-toggle:checked ~ * .navbar-brand {
+    color: var(--ct-christmas-gold);
+    font: 1.33rem var(--ct-christmas-head-font);
+    filter: drop-shadow(0 0 2px var(--ct-christmas-gold));
+    transition: 0.5s;
+}
+#xmas-mode-toggle:checked ~ * .navbar li::after { /*Glowy Line*/
+    background-color: var(--ct-christmas-yellow);
+}
+
+
+/* Sections */
+#xmas-mode-toggle:checked ~ * section {
+    background: var(--ct-christmas-dark-blue);
+    color : var(--ct-christmas-gold);
+    transition: 0.5s;
+}
+#xmas-mode-toggle:checked ~ * section:nth-child(even) { /*Alternate sections*/
+    background: linear-gradient(125deg, var(--ct-christmas-blue), var(--ct-christmas-dark-blue));
+
+    color: var(--ct-christmas-gold);
+    transition: 0.5s;
+}
+
+/*Showcase*/
+#xmas-mode-toggle:checked ~ * #showcase {
+    background: linear-gradient(360deg, var(--ct-christmas-blue), var(--ct-christmas-dark-blue));
+    color: var(--ct-christmas-gold);
+    transition: 0.5s;
+}
+@media screen and (max-width: 1000px) {
+    #xmas-mode-toggle:checked ~ * #showcase {
+        background: linear-gradient(360deg, var(--ct-christmas-dark-blue), var(--ct-christmas-blue));
+
+    }
+    #xmas-mode-toggle:checked ~ * #showcase .title{
+        font-size: 2.5rem;
+    }
+}
+    
+#xmas-mode-toggle:checked ~ * #showcase figcaption { /*Figgy pudding*/
+    color: var(--ct-christmas-white);
+    filter: drop-shadow(0 0 2px var(--ct-christmas-gold));
+    font : .75rem var(--ct-christmas-text-font);
+    transition: 0.5s;
+}
+#xmas-mode-toggle:checked ~ * #showcase .card {
+    transition: 0.5s;
+    background-color: var(--ct-christmas-dark-blue);
+    border: 4px solid var(--ct-christmas-gold);
+    box-shadow: 0 0 10px var(--ct-christmas-gold);
+}
+#xmas-mode-toggle:checked ~ * #showcase .card-header {
+    background-color: var(--ct-christmas-dark-blue);
+    border-bottom: 4px dashed var(--ct-christmas-gold);
+    font: 3.5rem var(--ct-christmas-head-font);
+
+}
+#xmas-mode-toggle:checked ~ * #showcase .card-body {
+    background-color: var(--ct-christmas-dark-blue);
+}
+#xmas-mode-toggle:checked ~ * #showcase .card p {
+    color: var(--ct-christmas-white);
+    transition: 0.5s;
+}
+
+/*Resume*/
+#xmas-mode-toggle:checked ~ * #resume .text-muted {
+    color: var(--ct-christmas-tan) !important; /*I hate using important but i hate it more when it doesn't work*/
+}
+#xmas-mode-toggle:checked ~ * #resume a{
+    color: var(--ct-christmas-yellow);
+    font-size: 1.2rem;
+}
+#xmas-mode-toggle:checked ~ * #resume .btn-primary {
+    color: var(--ct-christmas-white);
+}
+
+
+
+#xmas-mode-toggle:checked ~ * #resume ul {
+    color: var(--ct-christmas-tan);
+    filter: drop-shadow(0 0 2px var(--ct-christmas-gold));
+}
+
+/*Projects*/
+/* Cards */
+#xmas-mode-toggle:checked ~ * .card {
+    background-color: var(--ct-christmas-white);
+    color: var(--ct-christmas-gold);
+    transition: 0.5s;
+}
+#xmas-mode-toggle:checked ~ * .card-title{
+    color: var(--ct-christmas-dark-blue);
+    font : 1.4rem var(--ct-christmas-head-font);
+    font-weight: 700;
+    padding-bottom: 10px;
+    border-bottom: 4px dashed var(--ct-christmas-gold);
+}
+#xmas-mode-toggle:checked ~ * .card-text{
+    color: var(--ct-christmas-dark-blue);
+    filter: drop-shadow(0 0 2px var(--ct-christmas-gold));
+    font : 1.2rem var(--ct-christmas-text-font);
+}
+
+/*Contact*/
+#xmas-mode-toggle:checked ~ * #contact h2{
+    color: var(--ct-christmas-yellow);
+    font : 4.5rem var(--ct-christmas-head-font);
+    filter: drop-shadow(0 0 2px var(--ct-christmas-gold));
+    transition: 0.5s;
+}
+
+/* Shine effect on contact icons */
+#xmas-mode-toggle:checked ~ * #contact li i{ 
+    color: var(--ct-christmas-white);
+    filter: drop-shadow(0 0 2px var(--ct-christmas-gold));
+}
+
+/* Footer */
+#xmas-mode-toggle:checked ~ * footer {
+    background-color: var(--ct-christmas-dark-blue);
+    color: var(--ct-christmas-white);
+    transition: 0.5s;
+    font: 1rem var(--ct-christmas-head-font);
+}
+#xmas-mode-toggle:checked ~ * footer li i{
+    color: var(--ct-christmas-white);
+    filter: drop-shadow(0 0 2px var(--ct-christmas-gold));
+} 
+#xmas-mode-toggle:checked ~ * footer a{
+    color: var(--ct-christmas-white);
+} 
+#xmas-mode-toggle:checked ~ * footer .comp{
+    color: var(--ct-christmas-white);
+} 
+#xmas-mode-toggle:checked ~ * footer .footer-brand {
+    filter: drop-shadow(0 0 2px var(--ct-christmas-gold));
+    transition: 0.5s;
+}
+
+/* Progress bars */
+#xmas-mode-toggle:checked ~ * .progress {
+    --bs-progress-bg: var(--ct-christmas-white);
+    border: 2px solid red;
+}
+#xmas-mode-toggle:checked ~ * .progress-bar {
+    color: #32CD32; /* Lime green */
+    text-shadow: -2px -2px 0 #000, 2px -2px 0 #000, -2px 2px 0 #000, 2px 2px 0 #000;
+    font-size: 1.25rem;
+}
+#xmas-mode-toggle:checked ~ * .progress-bar-striped {
+    background-image: linear-gradient(45deg, 
+        red 25%, 
+        var(--ct-christmas-white) 25%, 
+        var(--ct-christmas-white) 50%, 
+       red 50%, 
+       red 75%, 
+        var(--ct-christmas-white) 75%, 
+        var(--ct-christmas-white));
+    background-size: 1rem 1rem;
+    animation: progress-bar-candy 5s linear infinite;
+}
+/*Candy cane progress*/
+@keyframes progress-bar-candy {
+    from {
+        background-position: 0 0;
+    }
+    to {
+        background-position: 1rem 0;
+    }
+}
+
+
+/* Blue alert? lol*/
+#xmas-mode-toggle:checked ~ * .alert {
+    background-color: var(--ct-christmas-yellow);
+    color: var(--ct-christmas-dark-blue);
+    border-color: var(--ct-christmas-gold);
+    font-size: 1.25rem;
+    font-weight: 700;
+    filter: drop-shadow(0 0 5px var(--ct-christmas-gold));
+    transition: 0.5s;
+}
+#xmas-mode-toggle:checked ~ * .alert-heading {
+    color: var(--ct-christmas-dark-blue);
+    font-weight: 700;
+    filter: drop-shadow(0 0 5px var(--ct-christmas-gold));
+    transition: 0.5s;
+}
+
+
+
+
+
+/*SVGS*/
+#xmas-mode-toggle:checked ~ * .arrow-path {
+    stroke: var(--ct-christmas-gold);
+    transition: 0.5s;
+    filter: drop-shadow(0 0 5px var(--ct-christmas-gold));
+}
+/* Styling for the top wave when Xmas mode is enabled */
+#xmas-mode-toggle:checked ~ * #top-wave {
+    stroke: var(--ct-christmas-gold); /* Set the stroke color to Christmas gold */
+    transition: 0.5s; /* Smooth transition for stroke changes */
+    stroke-width: 10; /* Set the stroke width */
+    stroke-dasharray: 20 20; /* Create a dashed stroke pattern */
+    filter: drop-shadow(0 0 5px var(--ct-christmas-gold)); /* Add a drop shadow for a glowing effect */
+    animation: candyCaneMove 30s linear infinite reverse; /* Apply candy cane animation in reverse */
+    stroke-linecap: square; /* Set the line cap style */
+    stroke-linejoin: miter; /* Set the line join style */
+}
+#xmas-mode-toggle:checked ~ * #bottom-wave {
+    stroke: var(--ct-christmas-gold);
+    transition: 0.5s;
+    stroke-width: 10;
+    stroke-dasharray: 20 20;
+    filter: drop-shadow(0 0 5px var(--ct-christmas-gold));
+    animation: candyCaneMove 30s linear infinite;
+    stroke-linecap: square;
+    stroke-linejoin: miter;
+}
+/* Keyframes for the candy cane animation */
+/*No longer candycane but whatver it still works, more like glowing stars?*/
+@keyframes candyCaneMove {
+    from {
+        stroke-dashoffset: 0; /* Start position of the dash */
+    }
+    to {
+        stroke-dashoffset: 200; /* End position of the dash */
+    }
+}
+
+
+
+/* SVG Curves to look like snow */
+#xmas-mode-toggle:checked ~ * .nav-wave .shape-fill {
+    fill: var(--ct-christmas-white);
+    filter:opacity(0.5);
+}
+/* Cant wait for javascript?*/
+#xmas-mode-toggle:checked ~ * .contact-top-wave .shape-fill,
+#xmas-mode-toggle:checked ~ * .about-top-wave .shape-fill,
+#xmas-mode-toggle:checked ~ * .about-bottom-wave .shape-fill,
+#xmas-mode-toggle:checked ~ * .project-top-wave .shape-fill,
+#xmas-mode-toggle:checked ~ * .contact-bottom-wave .shape-fill {
+    fill: var(--ct-christmas-white);
+}
+
+/*Snowflake Effect*/
+/*I thought this would be worse*/
+.snowflakes {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 10;
+    display: none;
+}
+#xmas-mode-toggle:checked ~ .snowflakes {
+    display: block;
+}
+/* Snowflake styling */
+.snowflake {
+    position: absolute; /* Position each snowflake absolutely */
+    font-size: 20px; /* Set the size of the snowflake */
+    color: white; /* Set the color of the snowflake */
+    opacity: 0.9; /* Slightly transparent */
+    user-select: none; /* Prevent users from selecting the snowflakes */
+    animation: snowfall linear infinite; /* Apply the snowfall animation */
+    filter: drop-shadow(0 0 5px rgba(255, 255, 255, 0.7)); /* Add a drop shadow for a glowing effect */
+}
+/* Snowfall animation */
+/* Move the snowflake down the entire screen and rotate it for a fall effect */
+/* Spin */
+@keyframes snowfall {
+    to {
+        transform: translateY(100vh) rotate(360deg); 
+    }
+}
+/* Create multiple snowflakes with varied starting positions and timings */
+/* My children are all unique */
+.snowflake:nth-child(1) { 
+    left: 5%; 
+    animation-duration: 8s; 
+    animation-delay: 0s; 
+}
+.snowflake:nth-child(2) { 
+    left: 15%; 
+    animation-duration: 12s; 
+    animation-delay: 1s; 
+}
+.snowflake:nth-child(3) { 
+    left: 25%; 
+    animation-duration: 10s; 
+    animation-delay: 2s; 
+}
+.snowflake:nth-child(4) { 
+    left: 35%; 
+    animation-duration: 15s; 
+    animation-delay: 3s; 
+}
+.snowflake:nth-child(5) { 
+    left: 45%; 
+    animation-duration: 11s; 
+    animation-delay: 4s; 
+}
+.snowflake:nth-child(6) { 
+    left: 55%; 
+    animation-duration: 9s; 
+    animation-delay: 5s; 
+}
+.snowflake:nth-child(7) { 
+    left: 65%; 
+    animation-duration: 13s; 
+    animation-delay: 6s; 
+}
+.snowflake:nth-child(8) { 
+    left: 75%; 
+    animation-duration: 14s; 
+    animation-delay: 7s; 
+}
+.snowflake:nth-child(9) { 
+    left: 85%; 
+    animation-duration: 16s; 
+    animation-delay: 8s; 
+}
+.snowflake:nth-child(10) { 
+    left: 95%; 
+    animation-duration: 17s; 
+    animation-delay: 9s; 
+}

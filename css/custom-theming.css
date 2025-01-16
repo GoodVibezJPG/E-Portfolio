@@ -1,0 +1,273 @@
+/* Custom Theme Color Variables */
+:root{
+    --ct-umber: hsl(21, 24%, 28%);
+    --ct-linen: #f9ebe0;
+    --ct-brunswick-green: #345b4e;
+    --ct-gunmetal: #1f332e;
+    --ct-raisin-black: #1a181b;
+    --ct-platinum: #e3e1de;
+}
+
+/* Background Color Utilities */
+.ct-body-primary {
+    background-color: var(--ct-brunswick-green);
+}
+.ct-bg-color-primary {
+    background-color: var(--ct-brunswick-green);
+    color: var(--ct-platinum);
+}
+
+/* Text Color Utilities */
+.ct-text-umber{
+    color: var(--ct-umber);
+}
+.ct-text-white{
+    color: var(--ct-platinum);
+}
+.ct-text-off-white{
+    color: var(--ct-linen);
+}
+.ct-text-black{
+    color: var(--ct-raisin-black);
+}
+
+/* Link Styling */
+.ct-link{
+    color: var(--ct-text-umber);
+    text-decoration: none;
+    font-style: italic;
+    text-decoration: underline;
+}
+
+/* Section Styling */
+section:nth-child(even) {
+    background-color: var(--ct-brunswick-green);
+    color: var(--ct-platinum);
+}
+
+/* Border Utilities */
+.border-bottom {
+    border-bottom: var(--bs-border-width) var(--bs-border-style) var(--ct-umber);
+}
+.border-bottom-thick {
+    border-bottom: 0.25rem solid var(--ct-umber);
+}
+
+/* Navigation Bar Styling */
+.navbar {
+    /* Navbar Variables */
+    --bs-navbar-color: var(--ct-platinum);
+    --bs-navbar-hover-color: var(--ct-linen);
+    --bs-navbar-active-color: var(--ct-linen);
+    --bs-navbar-brand-color: var(--ct-linen);
+    --bs-navbar-brand-hover-color: var(--ct-platinum);
+    --bs-navbar-toggler-border-color: rgba(var(--bs-emphasis-color-rgb), 0.15);
+    --bs-navbar-toggler-border-radius: var(--bs-border-radius);
+    --bs-navbar-toggler-focus-width: 0.25rem;
+    --bs-navbar-toggler-transition: box-shadow 0.15s ease-in-out;
+    
+    /* Navbar Background */
+    background-color: rgba(31, 51, 46, 1);
+    backdrop-filter: blur(10px);
+    z-index: 1000;
+}
+
+/* Navbar Brand Animation */
+.navbar-brand:hover {
+    transform: scale(1.1) rotate(-3deg);
+    transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* Navbar Toggle Button */
+.navbar-toggler-icon {
+    width: 1.5em;
+    height: 1.5em;
+    background-image: var(--bs-navbar-toggler-icon-bg);
+}
+.navbar-toggler {
+    color: var(--ct-linen);
+    background-color: var(--ct-platinum);
+    border: var(--bs-border-width) solid var(--bs-navbar-toggler-border-color);
+    transition: all 0.3s ease;
+}
+.navbar-toggler:focus {
+    animation: wiggle 0.5s ease-in-out;
+}
+@keyframes wiggle {
+    0%, 100% { transform: rotate(0); }
+    25% { transform: rotate(-5deg); }
+    75% { transform: rotate(5deg); }
+}
+
+/* Navbar Links Animation */
+/* Navbar List Item Base Styling */
+.navbar li {
+    position: relative;          /* Required for absolute positioning of pseudo-element */
+    transition: all 0.3s ease;   /* Smooth transition for all properties */
+}
+
+/* Hover Effect - Slight Upward Movement */
+.navbar li:hover {
+    transform: translateY(-2px);  /* Moves item up slightly on hover */
+}
+
+/* Underline Animation Setup */
+.navbar li::after {
+    content: '';                 
+    position: absolute;          /* Position relative to li element */
+    width: 0;                    /* Start with no width */
+    height: 2px;                /* Thickness of underline */
+    bottom: -4px;               /* Position below text */
+    left: 50%;                  /* Center the underline */
+    background-color: var(--ct-linen);  /* Color of underline */
+    transition: all 0.3s ease;   /* Smooth animation for width change */
+    transform: translateX(-50%); /* Centers the growing line */
+}
+
+/* Underline Animation on Hover */
+.navbar li:hover::after {
+    width: 100%;                /* Expand to full width on hover */
+}
+
+/* Image Thumbnail Styling */
+.img-thumbnail {
+    background-color: var(--bs-body-bg);
+    border: var(--bs-border-width) solid var(--bs-border-color);
+    border-radius: var(--bs-border-radius);
+}
+
+/* Card Components */
+.title-card {
+    /* Title Card Variables and Base Styling */
+    --bs-card-cap-bg: var(--ct-brunswick-green);
+    --bs-card-cap-color: var(--ct-brunswick-green);
+    --bs-card-color: var(--ct-umber);
+    --bs-card-bg: var(--ct-brunswick-green);
+    --bs-card-img-overlay-padding: 1rem;
+    --bs-card-group-margin: 0.75rem;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    height: var(--bs-card-height);
+    color: var(--ct-umber);
+    background-color: var(--ct-brunswick-green);
+    border: 0;
+    border-radius: var(--bs-card-border-radius);
+}
+
+/* Regular Card Styling */
+.card {
+    /* Card Variables and Base Styling */
+    --bs-card-cap-bg: var(--ct-platinum);
+    --bs-card-cap-color: var(--ct-platinum);
+    --bs-card-color: var(--ct-umber);
+    --bs-card-bg: var(--ct-platinum);
+    --bs-card-img-overlay-padding: 1rem;
+    --bs-card-group-margin: 0.75rem;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    height: var(--bs-card-height);
+    color: var(--ct-umber);
+    background-color: var(--ct-platinum);
+    border: 0;
+    border-radius: var(--bs-card-border-radius);
+}
+
+/* Button Styling */
+.btn-primary {
+    /* Button Variables */
+    --bs-btn-color: #fff;
+    --bs-btn-bg: var(--ct-gunmetal);
+    --bs-btn-border-color: var(--ct-gunmetal);
+    --bs-btn-hover-color: #fff;
+    --bs-btn-hover-bg: var(--ct-brunswick-green);
+    --bs-btn-hover-border-color:var(--ct-brunswick-green);
+    --bs-btn-focus-shadow-rgb: 49, 132, 253;
+    --bs-btn-active-color: #fff;
+    --bs-btn-active-bg: var(--ct-brunswick-green);
+    --bs-btn-active-border-color: var(--ct-brunswick-green);
+    --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+    --bs-btn-disabled-color: #fff;
+}
+
+/* Button Hover Effects */
+.btn:hover {
+    position: relative;
+    overflow: hidden;
+    /* Creates a new stacking context */
+    /* Uses 3D transformations to create a new layer */
+    transform: translate3d(0, 0, 0);
+}
+
+/* Button Hover Animation */
+/* After element creates a pseudo-element that covers the button */
+/* Line gradient creates a wave effect that moves from left to right */
+.btn:hover::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 200%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    animation: wave 1.5s ease-in-out infinite;
+}
+
+/* Button Animations */
+/* The wave animation moves an element from left to right:
+ * 1. Starts at -100% (fully off-screen to the left)
+ * 2. Ends at 50% (halfway past the element's natural position) 
+ * The animation is infinite and loops back to the beginning.
+*/
+@keyframes wave {
+    0% { transform: translateX(-100%); }
+    100% { transform: translateX(50%); }
+}
+.btn:hover {
+    transform: translateY(-2px);
+    transition: transform 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+.btn:active {
+    transform: translateY(1px);
+}
+
+/* Progress Bar Styling */
+.progress{
+    /* Progress Bar Variables */
+    --bs-progress-height: 2rem;
+    --bs-progress-font-size: 0.75rem;
+    --bs-progress-bg: hsl(30, 100%, 98%);
+    --bs-progress-border-radius: var(--bs-border-radius);
+    --bs-progress-box-shadow: var(--bs-box-shadow-inset);
+    --bs-progress-bar-color: #fff;
+    --bs-progress-bar-transition: width 0.6s ease;
+    display: flex;
+    height: var(--bs-progress-height);
+    overflow: hidden;
+    font-size: var(--bs-progress-font-size);
+    background-color: var(--bs-progress-bg);
+    border-radius: var(--bs-progress-border-radius);
+}
+
+/* Progress Bar Animations */
+.progress-bar-striped {
+    background-image: repeating-radial-gradient(circle at 50% 50%,
+        rgba(21, 41, 36, .15) 0%,
+        rgba(21, 41, 36, .15) 10%,
+        transparent 10%,
+        transparent 20%
+    );
+    background-size: 2rem var(--bs-progress-height);
+}
+.progress-bar-animated {
+    animation: 2.5s linear infinite progress-bar-stripes;
+}
+@keyframes progress-bar-stripes {
+    0% { background-position-x: 2rem; }
+    100% { background-position-x: 0; }
+}

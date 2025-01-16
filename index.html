@@ -1,0 +1,603 @@
+<!-- Start of Document -->
+<!doctype html>
+<html lang="en"></html>
+    <meta charset="UTF-8"> <!-- Character Set -->
+    <meta name="description" content="Caleb M. Irvine's E-Portfolio showcasing IT projects, skills, and professional journey.">
+    <meta name="keywords" content="HTML, CSS, JavaScript, Portfolio">
+    <meta name="author" content="Caleb M. Irvine">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"> <!-- Viewport Meta Tag -->
+    <meta http-equiv="X-UA-Compatible" content="ie=edge"> <!-- IE Edge Compatibility -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous"> <!-- Bootstrap CSS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com"> <!-- Preconnect to Google Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,100..1000&family=Roboto+Slab:wght@100..900&display=swap" rel="stylesheet"> <!--Roboto Fonts-->
+    <link href="https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre:wght@300..900&family=Varela+Round&display=swap" rel="stylesheet"> <!--Christmas fonts-->
+    <link href="https://fonts.googleapis.com/css2?family=Audiowide&family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"> <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="css/style.css"> <!-- This is the main stylesheet -->
+    <link rel="stylesheet" href="css/custom-theming.css"> <!-- This is the alternate color scheme -->
+    <link rel="stylesheet" href="css/xmas.css"> <!-- This is the alternate color scheme -->
+    <link rel="icon" href="images/logo.png" type="image/png"> <!-- Favicon -->
+    <title>Caleb M. Irvine || E-Portfolio</title> <!-- Title -->
+    </head>
+    <body>
+        <!--Sibling Check-->
+        <input type="checkbox" id="xmas-mode-toggle" name="page-theme">
+        <div id="xmas-mode-box">
+            <label for="xmas-mode-toggle" id="xmas-mode-label">❄️</label>
+        </div>
+        <!-- Snowflakes -->
+        <div class="snowflakes">
+            <!-- My Snowflake children -->
+            <div class="snowflake">❄️</div><div class="snowflake">❄️</div><div class="snowflake">❄️</div><div class="snowflake">❄️</div><div class="snowflake">❄️</div><div class="snowflake">❄️</div><div class="snowflake">❄️</div><div class="snowflake">❄️</div><div class="snowflake">❄️</div><div class="snowflake">❄️</div> <!-- ten is enough?-->
+        </div>
+        <!-- Navbar -->
+        <header id="navbar-header">
+            <nav class="navbar navbar-expand-lg fixed-top"> <!-- Navbar -->
+                <div class="container-fluid py-auto">
+                    <!--Branding-->
+                    <a class="navbar-brand mx-3 fw-bold fs-4 text-decoration-none" href="#showcase">
+                        <span class="brand-text d-flex align-items-center">
+                            <i class="bi bi-code-slash fs-3 me-2"></i>
+                            Caleb M. Irvine
+                        </span>
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation"> 
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <!-- Home Link with Icon -->
+                        <li class="nav-item nav-underline mx-4">
+                            <a class="nav-link" aria-current="page" href="#showcase">
+                                <i class="bi bi-house-door"></i> Home
+                            </a>
+                        </li>
+                        <!-- About Link with Icon -->
+                        <li class="nav-item nav-underline mx-4">
+                            <a class="nav-link" href="#about">
+                                <i class="bi bi-person"></i> About
+                            </a>
+                        </li>
+                        <!-- Resume Link with Icon -->
+                        <li class="nav-item nav-underline mx-4">
+                            <a class="nav-link" href="#resume">
+                                <i class="bi bi-file-earmark-text"></i> Resume
+                            </a>
+                        </li>
+                        <!-- Projects Link with Icon -->
+                        <li class="nav-item nav-underline mx-4">
+                            <a class="nav-link" href="#projects">
+                                <i class="bi bi-code-square"></i> Projects
+                            </a>
+                        </li>
+                        <!-- Contact Link with Icon -->
+                        <li class="nav-item nav-underline mx-4">
+                            <a class="nav-link" href="#contact">
+                                <i class="bi bi-envelope"></i> Contact
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <!-- SVG Curve Effect fixed to the bottom on the nav bar-->
+            <div class="nav-wave"> 
+                <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+                    <path d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z" opacity=".25" class="shape-fill"></path>
+                    <path d="M0,0V15.81C13,36.92,27.64,56.86,47.69,72.05,99.41,111.27,165,111,224.58,91.58c31.15-10.15,60.09-26.07,89.67-39.8,40.92-19,84.73-46,130.83-49.67,36.26-2.85,70.9,9.42,98.6,31.56,31.77,25.39,62.32,62,103.63,73,40.44,10.79,81.35-6.69,119.13-24.28s75.16-39,116.92-43.05c59.73-5.85,113.28,22.88,168.9,38.84,30.2,8.66,59,6.17,87.09-7.5,22.43-10.89,48-26.93,60.65-49.24V0Z" opacity=".5" class="shape-fill"></path>
+                    <path d="M0,0V5.63C149.93,59,314.09,71.32,475.83,42.57c43-7.64,84.23-20.12,127.61-26.46,59-8.63,112.48,12.24,165.56,35.4C827.93,77.22,886,95.24,951.2,90c86.53-7,172.46-45.71,248.8-84.81V0Z" class="shape-fill"></path>
+                </svg>
+            </div>
+        </nav>        
+    </header>
+
+    <main>
+    <!-- Showcase Section -->
+    <section id="showcase" class="hero-full-height z-1 position-relative">
+        <div id="showcase-content" class="container-fluid py-5 my-2"> <!-- Showcase Content FLUID Hero Container -->
+            <div class="row d-flex align-items-center"> <!-- Row for Showcase Content -->
+                <div id="portrait" class="col-lg-3 col-md-12 order-lg-1 order-sm-2 position-relative pt-3"> <!-- div for Portrait Image -->
+                    <div id="arrow"> <!-- div for Arrow SVG... I hated this so much, i just wanted an animated arrow i shoudlve found a gif or something omg, i probably coulve found a tool but this was what i wanted -->
+                        <svg class="arrow-svg" viewBox="0 0 485 640" xmlns="http://www.w3.org/2000/svg"> 
+                            <path class="arrow-path" 
+                                    d="M345 650
+                                    Q520 200, 242.5 200 
+                                    L285 140
+                                    L290 270
+                                    L242.5 200"
+                                    fill="none" 
+                                    stroke="rgb(237, 140, 1)" 
+                                    stroke-opacity="0.9"
+                                    stroke-width="18"
+                                    stroke-linejoin="round">
+                            </path> <!-- Arrow Path with a round pen effect, -->
+                        </svg> 
+                    </div>
+                    <figure class="figure"> <!-- Figure element for image captioning -->
+                        <!-- Spinner for loading image -->
+                        <div class="spinner-grow position-absolute top-50 start-50 translate-middle z-n1 " role="status">
+                            <span class="visually-hidden">Loading...</span>
+                        </div>
+                        <img src="images/ziplining1.jpg" class="figure-img img-fluid img-thumbnail rounded position-relative" alt="Me and my partner at Andreni-line zipline"> <!-- Image -->
+                        <figcaption class="figure-caption ct-text-umber">Me (left), and my partner Phoenix (right). Ziplining in Sooke.</figcaption> <!-- Image Caption -->
+                    </figure>
+                </div>
+                <div class="text-content col-lg-6 col-md-12 order-lg-2 order-sm-1 fs-4 pt-3"> <!-- Column for Showcase Content -->
+                    <!-- Showcase Text Content -->
+                    <h1 class="display-2 fw-bold ct-text-umber title">Hey there, I'm Caleb! <span class="wave-hand">👋🏽</span></h1> 
+                    <p class="text-start fw-medium">I'm an aspiring IT professional, and first year student in Camosun's 
+                        <a href="https://camosun.ca/programs-courses/find-program/information-and-computer-systems-technologist-diploma" class="ct-link" title="Camosun's ICS program webpage.">
+                        Information and Computer Systems Technology Diploma</a> program. 🖥️
+                    </p>
+                </div>
+                <!-- Card for Why Me? -->
+                <div class="card-content col-lg-3 col-md-12 order-lg-3 order-sm-3 text-center">  
+                    <!-- Card -->
+                    <div class="card">
+                        <div class="card-header fw-medium display-4 ct-bg-color-primary ct-text-off-white">
+                            Why Me?
+                        </div>
+                        <div class="card-body fw-medium fs-5 ct-bg-color-primary ct-text-off-white">
+                          <p class="card-text ct-text-off-white">Always down for a challenge, I thrive on juggling multiple tasks with a laid-back vibe. 🌟</p>
+                          <p class="card-text ct-text-off-white">Tech is my playground, and complexity doesn't scare me—it excites me. Let's make something awesome. 🤖</p>
+                        </div>
+                      </div>
+                </div>
+            </div>
+        </div>
+        <div class="see-more-butt text-center mt-4">
+            <!-- Button to scroll down to About Section -->
+            <a href="#about" class="btn btn-primary btn-lg">
+                <i class="bi bi-chevron-down"></i>
+            </a>
+        </div>
+
+        <!-- SVG Wave Effects -->
+        <div id="top-wave" class="wave-container"> <!-- Top Wave Container -->
+            <svg id="visual" viewBox="0 0 900 600" width="110%" height="100%" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1"><path d="M0 160L21.5 150.5C43 141 86 122 128.8 108C171.7 94 214.3 85 257.2 92C300 99 343 122 385.8 124.7C428.7 127.3 471.3 109.7 514.2 112.8C557 116 600 140 642.8 143.3C685.7 146.7 728.3 129.3 771.2 117.3C814 105.3 857 98.7 878.5 95.3L900 92"></path></svg>
+        </div>
+        <div id="bottom-wave" class="wave-container"> <!-- Bottom Wave Container -->
+            <svg id="visual" viewBox="0 0 900 600" width="110%" height="100%" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1"><path d="M0 289L21.5 302.7C43 316.3 86 343.7 128.8 377C171.7 410.3 214.3 449.7 257.2 462.3C300 475 343 461 385.8 442C428.7 423 471.3 399 514.2 392.8C557 386.7 600 398.3 642.8 405.7C685.7 413 728.3 416 771.2 425.2C814 434.3 857 449.7 878.5 457.3L900 465"></path></svg>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class=" z-1 position-relative d-flex justify-content-center align-items-center py-5 timeline-item">
+        <!--SVG Top/Bottom Section Wave Effects-->
+        <div class="about-top-wave">
+            <svg class="white-curve" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+                <path d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z" opacity=".25" class="shape-fill"></path>
+                <path d="M0,0V15.81C13,36.92,27.64,56.86,47.69,72.05,99.41,111.27,165,111,224.58,91.58c31.15-10.15,60.09-26.07,89.67-39.8,40.92-19,84.73-46,130.83-49.67,36.26-2.85,70.9,9.42,98.6,31.56,31.77,25.39,62.32,62,103.63,73,40.44,10.79,81.35-6.69,119.13-24.28s75.16-39,116.92-43.05c59.73-5.85,113.28,22.88,168.9,38.84,30.2,8.66,59,6.17,87.09-7.5,22.43-10.89,48-26.93,60.65-49.24V0Z" opacity=".5" class="shape-fill"></path>
+                <path d="M0,0V5.63C149.93,59,314.09,71.32,475.83,42.57c43-7.64,84.23-20.12,127.61-26.46,59-8.63,112.48,12.24,165.56,35.4C827.93,77.22,886,95.24,951.2,90c86.53-7,172.46-45.71,248.8-84.81V0Z" class="shape-fill"></path>
+            </svg>
+        </div>
+        <div class="about-bottom-wave">
+            <svg class="white-curve" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+                <path d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z" opacity=".25" class="shape-fill"></path>
+                <path d="M0,0V15.81C13,36.92,27.64,56.86,47.69,72.05,99.41,111.27,165,111,224.58,91.58c31.15-10.15,60.09-26.07,89.67-39.8,40.92-19,84.73-46,130.83-49.67,36.26-2.85,70.9,9.42,98.6,31.56,31.77,25.39,62.32,62,103.63,73,40.44,10.79,81.35-6.69,119.13-24.28s75.16-39,116.92-43.05c59.73-5.85,113.28,22.88,168.9,38.84,30.2,8.66,59,6.17,87.09-7.5,22.43-10.89,48-26.93,60.65-49.24V0Z" opacity=".5" class="shape-fill"></path>
+                <path d="M0,0V5.63C149.93,59,314.09,71.32,475.83,42.57c43-7.64,84.23-20.12,127.61-26.46,59-8.63,112.48,12.24,165.56,35.4C827.93,77.22,886,95.24,951.2,90c86.53-7,172.46-45.71,248.8-84.81V0Z" class="shape-fill"></path>
+            </svg>
+        </div>
+        <!-- End of SVG Top/Bottom Section Wave Effects-->
+        <div class="container">
+            <div class="row">
+                <!-- Dual Column Section -->
+                <div class="col-lg-6 p-5">
+                    <!-- About Me Section -->
+                    <h2 class="display-4 fw-bold">About Me</h2>
+                    <p class="fs-5 fw-medium lh-lg">ÍY SȻÁĆEL (Good day in SENĆOŦEN)! </p>
+                    <p class="fs-5 fw-medium lh-lg"> As a proud W̱SÁNEĆ Tswout from the Saanich Peninsula, I am a first-year student at Camosun College dedicated to reconnecting with my Indigenous roots and contributing to my community. My journey brings me back to Victoria not just as a student of technology, but as a member of the W̱SÁNEĆ Nation committed to bridging communtiy knowledge with modern technological innovation.</p>
+                    <p class="fs-5 fw-medium lh-lg"> My path is driven by a deep desire to support and empower my community through education and technical expertise. My community, and the potential of technology are my greatest inspirations. Through my studies and work, I hope to create pathways that honor both traditional wisdom and technological advancement, serving as a bridge between generations and cultures.</p>
+                </div>
+                <!-- My skills Section -->
+                <div class="col-lg-6 p-5">
+                    <h2 class="display-4 fw-bold">My Skills</h2>
+                    <p class="fs-5 fw-medium lh-lg">With a comprehensive foundation in Information and Computer Systems Technology, I bring a dynamic skill set that seamlessly blends technical expertise, customer service, and system optimization. My professional journey through Apple ecosystem repair, technical support, and retail technology sales has equipped me with a unique combination of technical proficiency and interpersonal skills.</p>
+                    <p class="fs-5 fw-medium lh-lg">Beyond technical skills, I bring strong academic discipline, cultural awareness, and a passion for bridging traditional knowledge with modern technology. My ability to quickly adapt, solve complex problems, and communicate effectively makes me a versatile technology professional dedicated to serving both technological and community needs.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Resume Section // Made with text to HTML converter -->
+    <section id="resume" class="z-1 position-relative py-5 timeline-item">
+       <div class="container py-3">
+            <!-- Resume Start-->
+             <!-- ROWS AND CoLUMNS BLAH BLAH -->
+            <!-- Resume Section Content -->
+            <div class="row">
+                <!-- Resume Header -->
+                <div class="col-12 text-left mb-4">
+                    <h2 class="display-2 pb-3 mb-3 fw-bold border-bottom-thick">My Resume</h2>
+                </div>
+                
+                <!-- Personal Information -->
+                <div class="col-12 text-center mb-4">
+                    <h1 class="display-5 fw-bold">Caleb M. Irvine</h1>
+                    <p class="lead">Victoria, BC</p>
+                    <div class="contact-info">
+                        <p class="mb-1">
+                            <!-- Contact Links -->
+                            <a href="tel:+" class="text-decoration-none ct-text-umber">(555) 555-5555</a> | 
+                            <a href="mailto:kalesaladjpg@protonmail.com" class="text-decoration-none ct-text-umber">kalesaladjpg@protonmail.com</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Education Section -->
+            <div class="row">
+                <div class="col-12">
+                    <h2 class="border-bottom pb-2 mb-3">Education</h2>
+                    <div class="mb-4">
+                        <h3 class="h4">Camosun College, Victoria, BC</h3>
+                        <p class="fst-italic">Diploma & Certificate in Information and Computer Systems Technologist</p>
+                        <p class="text-muted">September 2024 - Expected April 2026</p>
+                        <p>A comprehensive program focusing on full-stack development, computer systems, and network architecture. Currently maintaining strong academic standing while developing practical skills through hands-on projects and lab work.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Relevant Experience Section -->
+            <div class="row">
+                <div class="col-12">
+                    <h2 class="border-bottom pb-2 mb-3">Relevant Experience</h2>
+                    <div class="mb-4">
+                        <h3 class="h4">Mother Computers, Victoria, BC</h3>
+                        <p class="fst-italic">MacOS/PC Technician & Sales</p>
+                        <p class="text-muted">May 2024 - Present</p>
+                        <ul class="list-unstyled">
+                            <li class="mb-2">• Troubleshoot and repair of various personal computing devices, networks, and peripherals for customers and small business clients</li>
+                            <li class="mb-2">• Delivered on-site technical support and provide knowledge transfer sessions to clients</li>
+                            <li class="mb-2">• Executed customer device documentation and maintain communication between clients and technical team</li>
+                            <li class="mb-2">• Specializing in Apple ecosystem repairs and services</li>
+                        </ul>
+                    </div>
+                    <div class="mb-4">
+                        <h3 class="h4">Best Buy, Victoria, BC</h3>
+                        <p class="fst-italic">Apple Advisor & Key Holder</p>
+                        <p class="text-muted">October 2023 - May 2024</p>
+                        <ul class="list-unstyled">
+                            <li class="mb-2">• Implemented Apple's Champion program best practices to deliver expert device and service recommendations</li>
+                            <li class="mb-2">• Customized telecom solutions for consumer and small business accounts, including cellular plans and financing options</li>
+                            <li class="mb-2">• Performed secure store closing procedures and key holder responsibilities</li>
+                        </ul>
+                    </div>
+                    <div class="mb-4">
+                        <h3 class="h4">CityMac, Bellingham, WA</h3>
+                        <p class="fst-italic">Certified Apple iOS/MacOS Technician</p>
+                        <p class="text-muted">2020 - 2022</p>
+                        <ul class="list-unstyled">
+                            <li class="mb-2">• Played a critical role in iOS software and hardware repair, ensuring company profit and customer satisfaction</li>
+                            <li class="mb-2">• Maintained consistent top earner status through efficient repair turnarounds</li>
+                            <li class="mb-2">• Ensured repair workflow for efficiency, proper documentation, and customer communication</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- References Section -->
+            <div class="row">
+                <div class="col-12">
+                    <h2 class="border-bottom pb-2 mb-3">References</h2>
+                    <p class="fst-italic">Available on request.</p>
+                </div>
+            </div>
+            </div>
+            <!-- End of Resume Section -->
+
+            <!-- Download Button -->
+            <div class="text-center py-5">
+                <a href="Resume.pdf" class="btn btn-primary btn-lg" download="Resume.pdf">
+                    <i class="bi bi-download"></i> Download</a>
+            </div>
+            <!-- End of Resume Section -->
+
+            <!-- Progress -->
+            <div class="container">
+                <div class="row mt-4">
+                    <div class="col-12 text-center mb-3">
+                        <h3 class="display-6 fw-bold border-bottom-thick text-start py-3">Would you like to see my progress?</h3>
+                    <!--interactive  btns with icons-->
+                    <!-- yes -->
+                    <div class="btn-group mt-3" role="group" aria-label="Progress choice">
+                        <label class="btn btn-outline-success btn-lg mx-2" for="showProgress">
+                            <i class="bi bi-hand-thumbs-up-fill"></i>
+                        </label>
+                        
+                        <!-- no -->
+                        <label class="btn btn-outline-danger btn-lg mx-2" for="denyProgress">
+                            <i class="bi bi-hand-thumbs-down-fill"></i>
+                        </label>
+                    </div>
+                </div>
+                <!-- Sibling Radio Buttons -->
+                <input type="radio" class="btn-check" name="progress" id="showProgress">
+                <input type="radio" class="btn-check" name="progress" id="denyProgress">
+            
+                <!-- Progress Bars -->
+                <!-- Show progress -->
+                <div id="progress-bars" class="justify-content-center">
+                    <div class="col-md-8 col-lg-8 mx-auto">
+                        <!-- Section Title -->
+                        <h4 class="display-6 fw-bold text-center p-3">My Skills</h4>
+                        <!-- Progress Bar for System Administration -->
+                        <div class="progress my-5" role="progressbar" aria-label="System Administration Progress" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100">
+                            <div class="progress-wrapper">
+                                <div class="progress-front progress-bar progress-bar-striped progress-bar-animated ct-bg-color-primary" style="width: 60%">System Administration</div>
+                                <div class="progress-back progress-bar progress-bar-striped progress-bar-animated ct-bg-color-secondary" style="width: 60%">60%</div>
+                            </div>
+                        </div>
+                        
+                        <!-- Progress Bar for Java -->
+                        <div class="progress my-5" role="progressbar" aria-label="Java Progress" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100">
+                            <div class="progress-wrapper">
+                                <div class="progress-front progress-bar progress-bar-striped progress-bar-animated ct-bg-color-primary" style="width: 70%">Java</div>
+                                <div class="progress-back progress-bar progress-bar-striped progress-bar-animated ct-bg-color-secondary" style="width: 70%">70%</div>
+                            </div>
+                        </div>
+                            
+                        <!-- Progress Bar for HTML/CSS -->
+                        <div class="progress my-5" role="progressbar" aria-label="HTML/CSS Progress" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100">
+                            <div class="progress-wrapper">
+                                <div class="progress-front progress-bar progress-bar-striped progress-bar-animated ct-bg-color-primary" style="width: 90%">HTML/CSS</div>
+                                <div class="progress-back progress-bar progress-bar-striped progress-bar-animated ct-bg-color-secondary" style="width: 90%">90%</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Denied Message // Rude -->
+                <div id="denied" class="row">
+                    <div class="col-12">
+                        <div class="alert alert-danger" role="alert">
+                            <h4 class="alert-heading">I'm sorry to hear that 😔</h4>
+                            <p>It's okay, I'm still learning and growing. I hope to improve and show you my progress in the future.</p>
+                            <hr>
+                            <p class="mb-0">Thank you for your feedback.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Projects Section -->
+    <section id="projects" class="position-relative d-flex align-items-center p-5 timeline-item">
+        <!--SVG Top/Bottom Section Wave Effects-->
+        <div class="project-top-wave">
+            <svg class="white-curve" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+                <path d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z" opacity=".25" class="shape-fill"></path>
+                <path d="M0,0V15.81C13,36.92,27.64,56.86,47.69,72.05,99.41,111.27,165,111,224.58,91.58c31.15-10.15,60.09-26.07,89.67-39.8,40.92-19,84.73-46,130.83-49.67,36.26-2.85,70.9,9.42,98.6,31.56,31.77,25.39,62.32,62,103.63,73,40.44,10.79,81.35-6.69,119.13-24.28s75.16-39,116.92-43.05c59.73-5.85,113.28,22.88,168.9,38.84,30.2,8.66,59,6.17,87.09-7.5,22.43-10.89,48-26.93,60.65-49.24V0Z" opacity=".5" class="shape-fill"></path>
+                <path d="M0,0V5.63C149.93,59,314.09,71.32,475.83,42.57c43-7.64,84.23-20.12,127.61-26.46,59-8.63,112.48,12.24,165.56,35.4C827.93,77.22,886,95.24,951.2,90c86.53-7,172.46-45.71,248.8-84.81V0Z" class="shape-fill"></path>
+            </svg>
+        </div>
+        <!-- End of SVG Top/Bottom Section Wave Effects-->
+
+        <div class="container">
+            <h2 class="display-3 fw-bold text-center p-5">My Projects</h2>
+            <!-- Masonry Project Cards -->
+            <!-- Masonry grid layout for project cards -->
+            <div class="row d-flex" data-masonry='{"percentPosition": true }'>
+            <!-- Project Card 1 - My Cats Website -->
+            <div class="col-md-6 col-lg-4 mb-4">
+                <div class="card p-3">
+                <div class="card-img-top text-center position-relative">
+                    <div class="spinner-grow position-absolute top-50 start-50 translate-middle z-n1 " role="status">
+                        <span class="visually-hidden">Loading...</span>
+                    </div>
+                    <a href="images/my_cats.png" target="_blank">
+                    <img src="images/my_cats.png" style="height: 350px; width: 100%; object-fit: cover;" alt="Cover of my cat webpage">
+                    </a>
+                </div>
+                <div class="card-body">
+                    <h5 class="card-title text-center">My Cats | Website</h5>
+                    <p class="card-text text-center mb-4 lh-lg">A HTML and pure CSS website, honing my skills in HTML/CSS, but more importantly discussing facts about my three wonderful cats</p>
+                    <a href="https://deepblue.camosun.bc.ca/~c0522047/ICS%20118/Labs/Midterm_Project/" class="btn btn-primary" target="_blank">🐱 Meet My Cats!</a>
+                </div>
+                </div>
+            </div>
+
+            <!-- Project Card 2 - Tasty Treats Bootstrap Website -->
+            <div class="col-md-6 col-lg-4 mb-4">
+                <div class="card p-3">
+                <div class="card-img-top text-center position-relative">
+                    <!--Spinner for loading image-->
+                    <div class="spinner-grow position-absolute top-50 start-50 translate-middle z-n1" role="status">
+                        <span class="visually-hidden">Loading...</span>
+                    </div>
+                    <a href="images/bs-tastytreats.png" target="_blank">
+                        <img src="images/bs-tastytreats.png" style="height: 350px; width: 100%; object-fit: cover;" alt="Cover of my BS Tasty Treats webpage">
+                    </a>
+                </div>
+                <div class="card-body">
+                    <h5 class="card-title text-center">Tasty Treats | Bootstrap Website</h5>
+                    <p class="card-text text-center mb-4 lh-lg">Practicing Bootstrap and honing my skills in front-end framework. Developing responsive and mobile-first websites</p>
+                    <a href="https://deepblue.camosun.bc.ca/~c0522047/ICS%20118/Labs/Lab06/" class="btn btn-primary" target="_blank">🍪 View Treats!</a>
+                </div>
+                </div>
+            </div>
+
+            <!-- Project Card 3 - Masonry Bootstrap Website -->
+            <div class="col-md-6 col-lg-4 mb-4">
+                <div class="card p-3">
+                <div class="card-img-top text-center position-relative">
+                    <!--Spinner for loading image-->
+                    <div class="spinner-grow position-absolute top-50 start-50 translate-middle z-n1 " role="status">
+                    <span class="visually-hidden">Loading...</span>
+                    </div>
+                    <a href="images/masonary.png" target="_blank">
+                    <img src="images/masonary.png" style="height: 350px; width: 100%; object-fit: cover;" alt="Cover of my BS masonary webpage">
+                    </a>
+                </div>
+                <div class="card-body">
+                    <h5 class="card-title text-center">Masonary | Bootstrap Website</h5>
+                    <p class="card-text text-center mb-4 lh-lg">A short demonstration of utilizing Bootstrap to design professional masonary portfolios, as well as animating beautiful borders with CSS</p>
+                    <a href="https://deepblue.camosun.bc.ca/~c0522047/ICS%20118/Labs/Lab07/" class="btn btn-primary" target="_blank">🎨 See Design!</a>
+                </div>
+                </div>
+            </div>
+
+            <!-- Project Card 4 - Temperature Monitor Python Project -->
+            <div class="col-md-6 col-lg-4 mb-4">
+                <div class="card p-3">
+                <div class="card-img-top text-center position-relative">
+                    <!--Spinner for loading image-->
+                    <div class="spinner-grow position-absolute top-50 start-50 translate-middle z-n1 " role="status">
+                    <span class="visually-hidden">Loading...</span>
+                    </div>
+                    <a href="images/Website_Running.png" target="_blank">
+                    <img src="images/Website_Running.png" style="height: 350px; width: 100%; object-fit: cover;" alt="Preview of web temperature project running">
+                    </a>
+                </div>
+                <div class="card-body">
+                    <h5 class="card-title text-center">Temperature Monitor | Python & RasbianOS</h5>
+                    <p class="card-text text-center mb-4 lh-lg">Setting up Raspberry Pi to host a webserver that shows the current temperature dynamically changing, as well as changing the Pi lights depending on rising or falling temperature. Made with Python</p>
+                    <a href="https://github.com/GoodVibezJPG/RasbianOS-Temperature-Monitor" class="btn btn-primary" target="_blank">🌡️ Check Temp!</a>
+                </div>
+                </div>
+            </div>
+
+            <!-- Project Card 5 - Server Hosting Linux Project -->
+            <div class="col-md-6 col-lg-4 mb-4">
+                <div class="card p-3">
+                <div class="card-img-top text-center position-relative">
+                    <!--Spinner for loading image-->
+                    <div class="spinner-grow position-absolute top-50 start-50 translate-middle z-n1 " role="status">
+                    <span class="visually-hidden">Loading...</span>
+                    </div>
+                    <a href="images/VNC_Access_MacOS.png" target="_blank">
+                    <img src="images/VNC_Access_MacOS.png" style="height: 350px; width: 100%; object-fit: cover;" alt="VNC Server access running">
+                    </a>
+                </div>
+                <div class="card-body">
+                    <h5 class="card-title text-center">Server Hosting | Linux & VMs</h5>
+                    <p class="card-text text-center mb-4 lh-lg">Configuring an always on Rocky Linux server environment, to run multiple server operations, such as SAMBA, SSH, and VNC screen access. All with secure connections, and permissions. (Also have my own personal server for games like Minecraft, FTP, and Video Streaming, containerized with Docker) </p>
+                    <a href="images/VNC_Access_MacOS.png" class="btn btn-primary" target="_blank">🖥️ View Server!</a>
+                </div>
+                </div>
+            </div>
+
+            <!-- Project Card 6 - Neural Network Python Project -->
+            <div class="col-md-6 col-lg-4 mb-4">
+                <div class="card p-3">
+                <div class="card-img-top text-center position-relative">
+                    <!--Spinner for loading image-->
+                    <div class="spinner-grow position-absolute top-50 start-50 translate-middle z-n1 " role="status">
+                    <span class="visually-hidden">Loading...</span>
+                    </div>
+                        <a href="images/NeNe.png" target="_blank">
+                            <img src="images/NeNe.png" style="height: 350px; width: 100%; object-fit: cover;" alt="Neural Network identifying numbers">
+                        </a>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title text-center">Basic Neural Network | Python</h5>
+                            <p class="card-text text-center mb-4 lh-lg">A neural network implementation for MNIST digit recognition using Python. Includes data preprocessing, forward/back propagation, gradient descent training, and visualization tools to demonstrate machine learning concepts with real-world data.</p>
+                            <a href="https://github.com/GoodVibezJPG/MNIST_NN" class="btn btn-primary" target="_blank">🧠 See AI!</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="position-relative d-flex align-items-center timeline-item" style="height: 90vh;">
+        <!--SVG Top/Bottom Section Wave Effects-->
+        <div class="contact-top-wave">
+            <svg class="green-curve" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+                <path d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z" opacity=".25" class="shape-fill"></path>
+                <path d="M0,0V15.81C13,36.92,27.64,56.86,47.69,72.05,99.41,111.27,165,111,224.58,91.58c31.15-10.15,60.09-26.07,89.67-39.8,40.92-19,84.73-46,130.83-49.67,36.26-2.85,70.9,9.42,98.6,31.56,31.77,25.39,62.32,62,103.63,73,40.44,10.79,81.35-6.69,119.13-24.28s75.16-39,116.92-43.05c59.73-5.85,113.28,22.88,168.9,38.84,30.2,8.66,59,6.17,87.09-7.5,22.43-10.89,48-26.93,60.65-49.24V0Z" opacity=".5" class="shape-fill"></path>
+                <path d="M0,0V5.63C149.93,59,314.09,71.32,475.83,42.57c43-7.64,84.23-20.12,127.61-26.46,59-8.63,112.48,12.24,165.56,35.4C827.93,77.22,886,95.24,951.2,90c86.53-7,172.46-45.71,248.8-84.81V0Z" class="shape-fill"></path>
+            </svg>
+        </div>
+        <div class="contact-bottom-wave">
+            <svg class="green-curve" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+                <path d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z" opacity=".25" class="shape-fill"></path>
+                <path d="M0,0V15.81C13,36.92,27.64,56.86,47.69,72.05,99.41,111.27,165,111,224.58,91.58c31.15-10.15,60.09-26.07,89.67-39.8,40.92-19,84.73-46,130.83-49.67,36.26-2.85,70.9,9.42,98.6,31.56,31.77,25.39,62.32,62,103.63,73,40.44,10.79,81.35-6.69,119.13-24.28s75.16-39,116.92-43.05c59.73-5.85,113.28,22.88,168.9,38.84,30.2,8.66,59,6.17,87.09-7.5,22.43-10.89,48-26.93,60.65-49.24V0Z" opacity=".5" class="shape-fill"></path>
+                <path d="M0,0V5.63C149.93,59,314.09,71.32,475.83,42.57c43-7.64,84.23-20.12,127.61-26.46,59-8.63,112.48,12.24,165.56,35.4C827.93,77.22,886,95.24,951.2,90c86.53-7,172.46-45.71,248.8-84.81V0Z" class="shape-fill"></path>
+            </svg>
+        </div>
+        <!-- End of SVG Top/Bottom Section Wave Effects-->
+        <!-- Contact Form Container -->
+        <div class="container">
+            <!-- Contact Form Row -->
+            <div class="row d-flex justify-content-between">
+            <!-- Contact Form Column -->
+            <div class="col-lg-5 col-md-12 text-center p-3">
+                <h2 class="display-2 pb-3 mb-3 fw-bold border-bottom-thick">Contact Me</h2>
+                <p class="fs-5">Have a question or want to work together? I'd love to hear from you!</p>
+                <form action="https://api.web3forms.com/submit" method="POST">
+                    <!--Web3Forms Email contact API-->
+                    <input type="hidden" name="access_key" value="1e57fcd9-c4a5-4a1f-b266-1ce93ebdfac9">
+                    <div class="form-floating mb-3 mt">
+                        <input type="text" name="name" class="form-control" id="floatingInput" placeholder="Your Name" required>
+                        <label for="floatingInput">Your Name</label>
+                    </div>
+                    <!-- Email Input Field -->
+                    <div class="form-floating mb-3 mt">
+                        <input type="email" name="email" class="form-control" id="floatingInput" placeholder="YourEmail@example.com" required>
+                        <label for="floatingInput">Email address</label>
+                    </div>
+                    <!-- Message Text Area -->
+                    <div class="form-floating mb-3">
+                        <textarea class="form-control" name="message" placeholder="Leave a comment here" id="floatingTextarea" required></textarea>
+                        <label for="floatingTextarea">Comments</label>
+                    </div>
+                    <!-- Submit Button -->
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </form>
+            </div>
+            <!-- Social Links Column -->
+            <div class="col-lg-5 col-md-12 text-center p-3">
+                <h2 class="display-2 pb-3 mb-3 fw-bold border-bottom-thick">Socials</h2>
+                <p class="fs-5">Connect with me on social media!</p>
+                <!-- Social Media Navigation -->
+                <ul class="nav justify-content-center">
+                <!-- LinkedIn Link -->
+                <li class="nav-item li-icon">
+                    <!---->
+                  <a class="nav-link" href="https://www.linkedin.com/in/caleb-m-irvine-806508246/" target="_blank" aria-label="Visit my LinkedIn profile"><i class="bi bi-linkedin"></i></a>
+                </li>
+                <!-- GitHub Link -->
+                <li class="nav-item li-icon">
+                  <a class="nav-link" href="https://github.com/GoodVibezJPG" target="_blank" aria-label="Visit my GitHub profile"><i class="bi bi-github"></i></a>
+                </li>
+                <!-- Email Link -->
+                <li class="nav-item li-icon">
+                  <a class="nav-link li-icon" href="mailto:kalesaladjpg@protonmail.com" target="_blank" aria-label="Send me an email"><i class="bi bi-envelope-fill"></i></a>
+                </li>
+                  </ul>
+            </div>
+            </div>
+        </div>
+    </section>
+    <!-- Footer Section -->
+    <footer class="d-flex flex-column flex-md-row justify-content-between align-items-center p-3 ct-bg-color-primary" role="contentinfo">
+        <!-- Footer Left Side - Copyright -->
+        <div class="d-flex flex-column flex-md-row align-items-center text-nowrap ct-text-off-white mb-3 mb-md-0">
+            <!-- Footer Brand-->
+            <a href="#showcase" class="me-2 text-decoration-none lh-1 ct-text-off-white footer-brand fw-bold" style="font-size: 1.1rem;" aria-label="Back to top"><i class="bi bi-code-slash fs-5 me-1"></i>Caleb M. Irvine</a>
+            <span class="cool-icons-foot">
+                Crafted with <i class="bi bi-cup-hot-fill text-danger"></i> & 
+                <span class="tech-stack">
+                    <i class="bi bi-filetype-html text-warning" aria-label="HTML"></i>
+                    <i class="bi bi-filetype-css text-info" aria-label="CSS"></i>
+                    <a href="https://getbootstrap.com/" target="_blank" aria-label="Made with Bootstrap"><i class="bi bi-bootstrap text-primary"></i></a>
+                </span>
+            </span>
+        </div>
+        <!-- Footer Right Side - Social Links -->
+        <ul class="nav justify-content-center justify-content-md-end" role="navigation" aria-label="Social media links">
+            <li class="ms-3 li-icon"><a href="https://www.linkedin.com/in/caleb-m-irvine-806508246/" target="_blank" aria-label="Visit my LinkedIn profile"><i class="bi bi-linkedin"></i></a></li>
+            <li class="ms-3 li-icon"><a href="https://github.com/GoodVibezJPG" target="_blank" aria-label="Visit my GitHub profile"><i class="bi bi-github"></i></a></li>
+            <li class="ms-3 li-icon"><a href="mailto:kalesaladjpg@protonmail.com" target="_blank" aria-label="Send me an email"><i class="bi bi-envelope-fill"></i></a></li>
+        </ul>
+    </footer>
+    </main> 
+<!-- End of Main Content -->
+ <!--Bootstrap JS-->
+ <!-- Any longer and ill go crazy im submitting now unless there is something deadly worng..-->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+</html>

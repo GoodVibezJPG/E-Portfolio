@@ -1,0 +1,556 @@
+/* Root variables for consistent theming */
+:root{
+    /* Color palette */
+    --ct-umber: #594236;
+    --ct-linen: #f9ebe0;
+    --ct-brunswick-green: #345b4e;
+    --ct-gunmetal: #1f332e;
+    --ct-raisin-black: #1a181b;
+    --ct-platinum: #e3e1de;
+
+    /* Typography */
+    --ct-font-header: "Roboto Slab", serif;
+    --ct-font-body: "Roboto Flex", sans-serif;
+}
+
+/* Base styles for HTML and body */
+html,body { 
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    background: var(--ct-platinum); 
+    color: var(--ct-umber); 
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
+
+/* Update the section animation to slide up */
+/* Firefox and Safari stay mad */
+/* Chrome and Edge are cool */
+section {
+    animation: appear linear;
+    animation-timeline: view();
+    animation-range: entry 0% cover 20%;
+}
+@keyframes appear {
+    0% {
+        opacity: 0.3;
+        filter: brightness(0.8);
+    }
+    100% {
+        opacity: 1;
+        filter: brightness(1);
+    }
+}
+
+/* Typography styles */
+h1,h2,h3,h4{
+    font-family: var(--ct-font-header);
+    font-weight: 700;
+}
+p, a, li, span, figcaption{
+    font-family: var(--ct-font-body);
+    font-weight: 400;
+}
+/* i icon hover animation */
+.li-icon:hover {
+    animation: tiltShake 0.5s ease-in-out;
+    transform-origin: center;
+}
+/*Shake animation for icons*/
+@keyframes tiltShake {
+    0%, 100% {
+        transform: rotate(0deg);
+    }
+    25% {
+        transform: rotate(-8deg);
+    }
+    50% {
+        transform: rotate(8deg);
+    }
+    75% {
+        transform: rotate(-8deg);
+    }
+}
+
+/* I need a hero*/
+.hero-full-height {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+/* Link Hover */
+#showcase a:hover{
+    text-decoration: underline;
+    color: var(--ct-brunswick-green);
+    transition: color 0.3s ease;
+}
+
+/* I dont remember why i named it this? */
+.see-more-butt {
+    color: var(--ct-linen);
+    border: 0;
+    border-radius: 0;
+    padding: 1rem 2rem;
+    font-size: 1.25rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+    animation: subtleBounce 1.5s infinite ease-in-out;
+    overflow: hidden;
+}
+
+.see-more-butt i {
+    display: inline-block;
+    transition: all 0.3s ease;
+    opacity: 1;
+    visibility: visible;
+    z-index: 2;
+    position: relative;
+    font-size: 1.5rem;
+}
+
+.see-more-butt:hover i {
+    transform: translateY(5px);
+    color: #1a181b;
+}
+
+/* UX Bounce Animation */
+@keyframes subtleBounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-5px);
+    }
+}
+/* I didnt like button on mobile, only old people or long websites need them on mobile */
+/* my website is not user friendly*/
+@media screen and (max-width: 1000px){
+    .see-more-butt{
+        display: none;
+    }   
+    #showcase .text-content{
+        padding-bottom: 2rem;
+    }
+    #showcase .card{
+        margin-top: 1rem;
+    }
+}
+
+
+/* Drawn Arrow */
+#arrow{
+ 
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    z-index: 2;
+    bottom: 10%;
+    left: 10%;
+}
+.arrow-svg {
+    width: 100%;
+    height: 100%;
+}
+/* Arrow Path */
+.arrow-path {
+    stroke-dasharray: 1200;
+    stroke-dashoffset: 1200; /* Positive value `s it draw from bottom to top */
+    animation: drawArrow 3.5s ease forwards; /* forwards keeps the last frame of the animation */
+    animation-delay: 3s; /* Add a delay before the animation starts */
+}
+/* Arrow Animation */
+@keyframes drawArrow {
+    to {
+        stroke-dashoffset: 0;
+    }
+}
+
+/* Waving Hand Emoji // NOT confused with my wave lines*/
+.wave-hand {
+    animation-name: wave-animation; 
+    animation-duration: 2.5s;      
+    animation-iteration-count: infinite;  /* Never stop waving :) */
+    /* This helped with the clock and vice versa */
+    transform-origin: 70% 70%;       /* Pivot around the bottom-left palm */
+    display: inline-block;
+  }
+/* The animation code */
+@keyframes wave-animation {
+    0% { transform: rotate( 0.0deg) }
+    10% { transform: rotate(14.0deg) }  
+    20% { transform: rotate(-8.0deg) }
+    30% { transform: rotate(14.0deg) }
+    40% { transform: rotate(-4.0deg) }
+    50% { transform: rotate(10.0deg) }
+    60% { transform: rotate( 0.0deg) }  /* Reset for the last half to pause */
+    100% { transform: rotate( 0.0deg) }
+}
+
+/* Wave Lines */
+.wave-container{
+    z-index: -1;
+    position: absolute;
+    width: 100%;
+    height: auto;
+    pointer-events: none;
+    overflow: hidden;
+}
+#top-wave{
+    top: -10%; 
+    /* Dark shadow effect */
+    filter: drop-shadow(-10px -10px var(--ct-brunswick-green)); 
+    animation: drawEffect 3.5s ease forwards;
+    stroke: #1f332e;
+    /* Round the ends of the line */
+    stroke-linecap: round;
+    /* Miter joins are sharp, but can be adjusted with stroke-miterlimit */
+    stroke-linejoin:miter;
+    fill:none;
+    stroke-width:20;
+    /* Adjust width to account for the shadow */
+    width: calc(100% + 25px);
+}
+#bottom-wave{
+    /* Dark shadow effect */
+    filter: drop-shadow(-10px 10px var(--ct-brunswick-green));
+    animation: drawEffect 3.5s ease forwards;
+    stroke: #1f332e;
+    stroke-linecap: round;
+    stroke-linejoin:miter;
+    fill:none;
+    stroke-width:20;
+    /* Adjust width to account for the shadow */
+    width: calc(100% + 25px); 
+
+}
+/* Adjust Wave Lines for Smaller Screens */
+@media screen and (max-width: 1500px){
+    #top-wave{
+        top: 0%;
+    }
+    #bottom-wave{   
+        bottom: -10%;
+    }   
+}
+@media screen and (max-width: 1000px){
+    #top-wave{
+        top: 30%;
+    }
+    #bottom-wave{   
+        bottom: -10%;
+    }   
+    #showcase .title{
+        font-size: 2.5rem;
+    }
+}
+/* Drawing Effect */
+/* This creates a smooth "drawing" or "revealing" effect for the wave SVG, making it look like the line is being drawn from start to finish over given seconds. */
+@keyframes drawEffect {
+/* Initially, set the dash array to 0 (no visible line) and the total dash length to a large value (1000) */
+    0% {
+        /*stroke-dasharray controls the pattern of dashes and gaps in a stroke.*/
+        stroke-dasharray: 0, 1000; 
+        /* stroke-dashoffset controls the starting point of the dash array. */
+        stroke-dashoffset: 0;
+    }
+     /* By the end of the animation, swap the dash array to create a drawing/reveal effect:
+        - 1000 units of visible line 
+        - 0 units of gap */
+    100% {
+        stroke-dasharray: 1000, 0;
+        /* Move the dash offset to -1000, which makes the line 
+        appear to be drawn from start to end */
+        stroke-dashoffset: -1000;
+    }
+}
+.draw-effect {
+    animation: drawEffect 2s linear forwards;
+}
+
+/* Progress Bars */
+/* I wonder what i hated more, progress bars or the wave lines */
+/* Progress bars, because they are not as fun as wave lines */
+/* Hide both progress bars and denied message by default */
+#progress-bars,
+#denied {
+    display: none;
+    opacity: 0;
+    transition: opacity 0.5s ease-out;
+}
+
+/* Checkbox method to show/hide sections */
+#showProgress:checked ~ #progress-bars,
+#denyProgress:checked ~ #denied {
+    display: block;
+    opacity: 1;
+}
+
+/* Ensure only one can be shown at a time */
+#showProgress:checked ~ #denied,
+#denyProgress:checked ~ #progress-bars {
+    display: none;
+    opacity: 0;
+}
+
+.progress {
+    position: relative;
+    perspective: 1000px;
+    overflow: hidden;
+    animation: pulseGlow 2s ease-in-out infinite;
+    cursor: pointer;
+}
+
+/* TO entice Joe to click on the progress bars */
+@keyframes pulseGlow {
+    0%, 100% {
+        transform: scale(1); 
+        box-shadow: 0 0 0 rgba(255,255,255,0);
+    }
+    50% {
+        transform: scale(1.01);
+        box-shadow: 0 0 20px rgba(255,255,255,0.3);
+    }
+}
+
+
+.progress:hover {
+    transform: translateY(-5px);
+    transition: transform 0.3s ease;
+}
+
+.progress-wrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+}
+
+.progress-front,
+.progress-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    display: flex;
+    align-items: center;
+    padding: 0 10px;
+    font-weight: bold;
+}
+
+
+
+/*Flip the progress bar to show the back side*/
+.progress-back {
+    transform: rotateX(180deg);
+    justify-content: center;
+    background-color: var(--ct-umber);
+    width: 100%;
+}
+
+.progress:hover .progress-wrapper {
+    transform: rotateX(180deg);
+}
+
+@media (hover: none) {
+    .progress:active .progress-wrapper {
+        transform: rotateX(180deg);
+    }
+}
+
+/* Progress Bar Animation */
+@keyframes fillProgress {
+    from { width: 0%; }
+    to { width: var(--skill-width, 0%); }
+}
+
+/* This was the worst*/
+.progress-front {
+    width: 0;
+    animation: fillProgress 4.5s ease-in-out forwards;
+}
+#showProgress:checked ~ #progress-bars .progress-front {
+    --skill-width: 90%;
+    animation: fillProgress 2.5s ease-in-out forwards;
+}
+
+#showProgress:checked ~ #progress-bars .progress:nth-child(2) .progress-front {
+    --skill-width: 60%;
+    animation: fillProgress 2.5s ease-in-out forwards;
+}
+
+#showProgress:checked ~ #progress-bars .progress:nth-child(3) .progress-front {
+    --skill-width: 70%;
+    animation: fillProgress 2.5s ease-in-out forwards;
+}
+
+
+/* fun hover */
+.card:hover{
+    transform: scale(1.025) rotate(.25deg);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+img:hover {
+    transform: scale(1.025) rotate(-.5deg);
+    position: relative;
+    filter: brightness(0.7);
+    transition: filter 0.3s ease;
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+
+
+
+footer li i{
+    color: var(--ct-linen);
+    font-size: 1.25rem;
+}
+/* consistent with header */
+.footer-brand:hover{
+    transform: scale(1.1) rotate(-3deg);
+    transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+
+
+/*Curvy Wave Shape Dividers*/
+/*Credit to Tool https://www.shapedivider.app*/
+.about-top-wave {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+}
+.about-top-wave svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 35px;
+}
+.about-top-wave .shape-fill {
+    fill: #E3E1DE;
+}
+.about-bottom-wave {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
+}
+.about-bottom-wave svg {
+    position: relative;
+    display: block;
+    width: calc(132% + 1.3px);
+    height: 35px;
+}
+.about-bottom-wave .shape-fill {
+    fill: #E3E1DE;
+}
+
+
+.project-top-wave {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+}
+.project-top-wave svg {
+    position: relative;
+    display: block;
+    width: calc(132% + 1.3px);
+    height: 35px;
+    transform: rotateY(180deg);
+}
+.project-top-wave .shape-fill {
+    fill: #E3E1DE;
+}
+
+
+#contact li i{
+    color: var(--ct-umber);
+    font-size: 3rem;
+}
+
+.contact-top-wave {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+}
+.contact-top-wave svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 52px;
+}
+.contact-top-wave .shape-fill {
+    fill: #345B4E;
+}
+.contact-bottom-wave {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
+}
+.contact-bottom-wave svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 54px;
+}
+.contact-bottom-wave .shape-fill {
+    fill: #345B4E;
+}
+
+/* Navigation Wave curve overhang */
+.nav-wave {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+}
+.nav-wave svg {
+
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 15px;
+
+}
+.nav-wave .shape-fill {
+    fill: var(--ct-gunmetal);
+}
+
+
+
+
+
+
